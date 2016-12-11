@@ -99,32 +99,32 @@ public class SplashActivity extends AppCompatActivity implements ConstantPermiss
 
     private ArrayList<String> addPermissionToRequest(ArrayList<String> permissions) {
 
-        if (!isHasPermission(ConstantPermission.PERMISSION_INTERNET)) {
-            permissions.add(ConstantPermission.PERMISSION_INTERNET);
+        if (!isHasPermission(PERMISSION_INTERNET)) {
+            permissions.add(PERMISSION_INTERNET);
         }
 
-        if (!isHasPermission(ConstantPermission.PERMISSION_CAMERA)) {
-            permissions.add(ConstantPermission.PERMISSION_CAMERA);
+        if (!isHasPermission(PERMISSION_CAMERA)) {
+            permissions.add(PERMISSION_CAMERA);
         }
 
-        if (!isHasPermission(ConstantPermission.PERMISSION_COARSE_LOC)) {
-            permissions.add(ConstantPermission.PERMISSION_COARSE_LOC);
+        if (!isHasPermission(PERMISSION_COARSE_LOC)) {
+            permissions.add(PERMISSION_COARSE_LOC);
         }
 
-        if (!isHasPermission(ConstantPermission.PERMISSION_FINE_LOC)) {
-            permissions.add(ConstantPermission.PERMISSION_FINE_LOC);
+        if (!isHasPermission(PERMISSION_FINE_LOC)) {
+            permissions.add(PERMISSION_FINE_LOC);
         }
 
-        if (!isHasPermission(ConstantPermission.PERMISSION_READ_CONTACTS)) {
-            permissions.add(ConstantPermission.PERMISSION_READ_CONTACTS);
+        if (!isHasPermission(PERMISSION_READ_CONTACTS)) {
+            permissions.add(PERMISSION_READ_CONTACTS);
         }
 
-        if (!isHasPermission(ConstantPermission.PERMISSION_READ_EXTERNAL_STORAGE)) {
-            permissions.add(ConstantPermission.PERMISSION_READ_EXTERNAL_STORAGE);
+        if (!isHasPermission(PERMISSION_READ_EXTERNAL_STORAGE)) {
+            permissions.add(PERMISSION_READ_EXTERNAL_STORAGE);
         }
 
-        if (!isHasPermission(ConstantPermission.PERMISSION_WRITE_EXTERNAL_STORAGE)) {
-            permissions.add(ConstantPermission.PERMISSION_WRITE_EXTERNAL_STORAGE);
+        if (!isHasPermission(PERMISSION_WRITE_EXTERNAL_STORAGE)) {
+            permissions.add(PERMISSION_WRITE_EXTERNAL_STORAGE);
         }
 
         return permissions;
@@ -168,7 +168,7 @@ public class SplashActivity extends AppCompatActivity implements ConstantPermiss
         if (permissions.size() > 0) {
             ActivityCompat.requestPermissions(SplashActivity.this,
                     permissions.toArray(new String[permissions.size()]),
-                    ConstantPermission.CONST_MY_REQUEST_PERMISSION_CODE);
+                    CONST_MY_REQUEST_PERMISSION_CODE);
 
             for (String perm : permissions) {
                 markAskedPermission(perm);
@@ -178,7 +178,7 @@ public class SplashActivity extends AppCompatActivity implements ConstantPermiss
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == ConstantPermission.CONST_MY_REQUEST_PERMISSION_CODE) {
+        if (requestCode == CONST_MY_REQUEST_PERMISSION_CODE) {
             for (String perm : permissions) {
                 if (!isHasPermission(perm)) {
                     permissionsRejected.add(perm);

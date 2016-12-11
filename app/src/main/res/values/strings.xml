@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RuntimePermissionDemo</string>
+    <string name="splash">This is Splash Screen</string>
+    <string name="menu">This is Menu Screen</string>
+    <string name="shared_key">MY_SHARED_KEY</string>
+    <string name="grant">GRANT</string>
+    <string name="close_app">CLOSE APP</string>
+    <string name="dialog_msg">You Need To Grant All Permission to Proceed To Next Screen</string>
+</resources>

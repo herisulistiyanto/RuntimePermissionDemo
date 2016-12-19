@@ -1,5 +1,5 @@
 # RuntimePermissionDemo
-Example Using Runtime Permission Request On Android
+Example Using Runtime Permission Request On Android Lolipop 5.0+
 
 ## Synopsis
 This is just a simple example on how we put runtime permission request on android.
